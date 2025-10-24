@@ -1,40 +1,188 @@
-import sampleImage from "../assets/sample.jpg"; // Replace with your image path
-
-
+import { Link } from "react-router-dom";
+import sampleImage from "../assets/sample.jpg";
+import caltrackImg from "../assets/caltrack.jpg";
+import banterImg from "../assets/banter.jpg";
+import portalImg from "../assets/inclusiveportal.jpg";
 
 const Home = () => {
   return (
-    
-    
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "space-between",
-        alignItems: "center",
-        padding: "2rem",
-      }}
-    >
-      {/* Left-aligned text */}
-      <div style={{ flex: 1, textAlign: "left", paddingRight: "2rem" }}>
-        <h1>Welcome to My Website</h1>
-        <p>
-          This is the Home page built with Vite, React, and TypeScript. Explore design, creativity,
-          and technology in a clean layout.
-        </p>
+    <div style={{ padding: "2rem clamp(1rem, 4vw, 2.5rem)" }}>
+
+      {/* Cover Image with extra side padding ONLY for the image */}
+      <div style={{ padding: "0 clamp(1rem, 6vw, 4rem)" }}>
+
+        <div
+          style={{
+            position: "relative",
+            width: "100%",
+            height: "420px",
+            borderRadius: "16px",
+            overflow: "hidden",
+            backgroundImage: `url(${sampleImage})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+            boxShadow: "0 6px 16px rgba(0,0,0,0.12)",
+            marginBottom: "2rem",
+          }}
+          aria-label="Cover image"
+        >
+          {/* RIGHT-aligned overlay content (no gradient overlay) */}
+          <div
+            style={{
+              position: "absolute",
+              right: "2rem",
+              top: "50%",
+              transform: "translateY(-50%)",
+              maxWidth: "520px",
+              textAlign: "left",
+              color: "#A739A9", // ✅ requested color
+            }}
+          >
+            <h1 style={{ margin: 0, fontSize: "3rem", lineHeight: 1.15 }}>
+              Hi,<br />I am Janhavi.
+            </h1>
+            <p
+              style={{
+                marginTop: "0.75rem",
+                lineHeight: 1.6,
+                fontSize: "1.1rem",
+              }}
+            >
+              Part UI-UX designer, part stargazer, full-time explorer. Whether it’s
+              fine-tuning a user experience, learning to speak in three new languages,
+              or chasing the perfect photo, I’m always up for a new challenge!
+            </p>
+          </div>
+        </div>
       </div>
 
-      {/* Right-side cropped and smaller image */}
-      <div style={{ flex: 1, textAlign: "right" }}>
-        <img
-          src={sampleImage}
-          alt="Sample"
+      {/* Case Studies Section */}
+      <h2 style={{ textAlign: "center", marginBottom: "1.5rem" }}>
+        Featured Case Studies
+      </h2>
+
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+          gap: "2rem",
+          justifyItems: "center",
+        }}
+      >
+        {/* CalTrack */}
+        <Link
+          to="/caltrack"
           style={{
-            width: "300px",       // ✅ Fixed width
-            height: "200px",      // ✅ Fixed height
-            objectFit: "cover",   // ✅ Crops the image nicely
-            borderRadius: "8px",
+            textDecoration: "none",
+            color: "inherit",
+            width: "100%",
+            maxWidth: "320px",
           }}
-        />
+        >
+          <div
+            style={{
+              borderRadius: "16px",
+              overflow: "hidden",
+              boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)",
+              transition: "transform 0.3s ease, box-shadow 0.3s ease",
+            }}
+            onMouseEnter={(e) =>
+              (e.currentTarget.style.transform = "translateY(-8px)")
+            }
+            onMouseLeave={(e) =>
+              (e.currentTarget.style.transform = "translateY(0)")
+            }
+          >
+            <img
+              src={caltrackImg}
+              alt="CalTrack"
+              style={{ width: "100%", height: "200px", objectFit: "cover" }}
+            />
+            <div style={{ padding: "1rem" }}>
+              <h3>CalTrack</h3>
+              <p style={{ color: "#555" }}>
+                A calorie-tracking app designed for intuitive and mindful eating.
+              </p>
+            </div>
+          </div>
+        </Link>
+
+        {/* Banter */}
+        <Link
+          to="/banter"
+          style={{
+            textDecoration: "none",
+            color: "inherit",
+            width: "100%",
+            maxWidth: "320px",
+          }}
+        >
+          <div
+            style={{
+              borderRadius: "16px",
+              overflow: "hidden",
+              boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)",
+              transition: "transform 0.3s ease, box-shadow 0.3s ease",
+            }}
+            onMouseEnter={(e) =>
+              (e.currentTarget.style.transform = "translateY(-8px)")
+            }
+            onMouseLeave={(e) =>
+              (e.currentTarget.style.transform = "translateY(0)")
+            }
+          >
+            <img
+              src={banterImg}
+              alt="Banter"
+              style={{ width: "100%", height: "200px", objectFit: "cover" }}
+            />
+            <div style={{ padding: "1rem" }}>
+              <h3>Banter Kiosk</h3>
+              <p style={{ color: "#555" }}>
+                An interactive kiosk UI built for Banter’s smart retail experience.
+              </p>
+            </div>
+          </div>
+        </Link>
+
+        {/* Inclusive Portal */}
+        <Link
+          to="/inclusiveportal"
+          style={{
+            textDecoration: "none",
+            color: "inherit",
+            width: "100%",
+            maxWidth: "320px",
+          }}
+        >
+          <div
+            style={{
+              borderRadius: "16px",
+              overflow: "hidden",
+              boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)",
+              transition: "transform 0.3s ease, box-shadow 0.3s ease",
+            }}
+            onMouseEnter={(e) =>
+              (e.currentTarget.style.transform = "translateY(-8px)")
+            }
+            onMouseLeave={(e) =>
+              (e.currentTarget.style.transform = "translateY(0)")
+            }
+          >
+            <img
+              src={portalImg}
+              alt="Inclusive Portal"
+              style={{ width: "100%", height: "200px", objectFit: "cover" }}
+            />
+            <div style={{ padding: "1rem" }}>
+              <h3>Inclusive Job Portal</h3>
+              <p style={{ color: "#555" }}>
+                A platform designed with accessibility filters and inclusive UX principles.
+              </p>
+            </div>
+          </div>
+        </Link>
       </div>
     </div>
   );

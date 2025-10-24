@@ -4,24 +4,48 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import BeyondDesign from "./pages/BeyondDesign";
 import NotFound from "./pages/NotFound";
-import Navbar from "./components/Navbar"; // ✅ Add Navbar back
+import Navbar from "./components/Navbar";
+import CalTrack from "./pages/CalTrack";
+import Banter from "./pages/Banter";
+import InclusivePortal from "./pages/InclusivePortal";
+import Blog from "./pages/Blog";
 
 function App() {
   return (
-    <>
-      {/* ✅ Global Navbar at the top */}
+    
+    <div style={{ minHeight: "100vh", display: "flex", flexDirection: "column" }}>
+      {/* Global Navbar */}
       <Navbar />
 
-      <div style={{ padding: "2rem" }}>
+      {/* Main content grows to push bottom note down */}
+      <main style={{ padding: "2rem", flex: 1 }}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/beyonddesign" element={<BeyondDesign />} />
+          <Route path="/caltrack" element={<CalTrack />} />
+          <Route path="/banter" element={<Banter />} />
+          <Route path="/inclusiveportal" element={<InclusivePortal />} />
+          <Route path="/blog" element={<Blog />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
+      </main>
+
+     
+      <div
+        style={{
+          textAlign: "center",
+          fontSize: ".95rem",
+          color: "#6b7280",
+          padding: "0.75rem 1rem",
+          borderTop: "1px solid #eee",
+          background: "#fafafa",
+        }}
+      >
+        If you’ve scrolled this far, you deserve a cookie 🍪
       </div>
-    </>
+    </div>
   );
 }
 
