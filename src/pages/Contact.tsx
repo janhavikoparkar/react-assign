@@ -165,7 +165,7 @@ const input: React.CSSProperties = {
 } as const;
 
 // Add focus style with JS since we’re inline-styling
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+ 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 (Object.assign as any)(input, {
   transition: "box-shadow 140ms ease, border-color 140ms ease",

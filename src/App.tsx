@@ -9,15 +9,12 @@ import CalTrack from "./pages/CalTrack";
 import Banter from "./pages/Banter";
 import InclusivePortal from "./pages/InclusivePortal";
 import Blog from "./pages/Blog";
+import CS6041 from "./pages/CS6041"; // ✅ import ONLY the page, not images
 
 function App() {
   return (
-    
     <div style={{ minHeight: "100vh", display: "flex", flexDirection: "column" }}>
-      {/* Global Navbar */}
       <Navbar />
-
-      {/* Main content grows to push bottom note down */}
       <main style={{ padding: "2rem", flex: 1 }}>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -28,11 +25,11 @@ function App() {
           <Route path="/banter" element={<Banter />} />
           <Route path="/inclusiveportal" element={<InclusivePortal />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/cs6041" element={<CS6041 />} /> {/* ✅ route */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
 
-     
       <div
         style={{
           textAlign: "center",
