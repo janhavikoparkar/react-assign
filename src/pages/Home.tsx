@@ -3,7 +3,6 @@ import sampleImage from "../assets/sample.jpg";
 import caltrackImg from "../assets/caltrack.jpg";
 import banterImg from "../assets/banter.jpg";
 import portalImg from "../assets/inclusiveportal.jpg";
-// ⬇️ NEW import
 import cs6041Img from "../assets/cs6041.jpg";
 
 const Home = () => {
@@ -61,79 +60,93 @@ const Home = () => {
           justifyItems: "center",
         }}
       >
-        {/* CalTrack */}
-        <Link
-          to="/caltrack"
-          style={{ textDecoration: "none", color: "inherit", width: "100%", maxWidth: "320px" }}
+        {/* CalTrack – NOT clickable */}
+        <div
+          style={{
+            width: "100%",
+            maxWidth: "320px",
+            borderRadius: "16px",
+            overflow: "hidden",
+            boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)",
+            transition: "transform 0.3s ease, box-shadow 0.3s ease",
+          }}
+          onMouseEnter={(e) => (e.currentTarget.style.transform = "translateY(-8px)")}
+          onMouseLeave={(e) => (e.currentTarget.style.transform = "translateY(0)")}
         >
-          <div
-            style={{
-              borderRadius: "16px",
-              overflow: "hidden",
-              boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)",
-              transition: "transform 0.3s ease, box-shadow 0.3s ease",
-            }}
-            onMouseEnter={(e) => (e.currentTarget.style.transform = "translateY(-8px)")}
-            onMouseLeave={(e) => (e.currentTarget.style.transform = "translateY(0)")}
-          >
-            <img src={caltrackImg} alt="CalTrack" style={{ width: "100%", height: "200px", objectFit: "cover" }} />
-            <div style={{ padding: "1rem" }}>
-              <h3>CalTrack</h3>
-              <p style={{ color: "#555" }}>A calorie-tracking app designed for intuitive and mindful eating.</p>
-            </div>
+          <img
+            src={caltrackImg}
+            alt="CalTrack"
+            style={{ width: "100%", height: "200px", objectFit: "cover" }}
+          />
+          <div style={{ padding: "1rem" }}>
+            <h3>CalTrack</h3>
+            <p style={{ color: "#555" }}>
+              A calorie-tracking app designed for intuitive and mindful eating.
+            </p>
           </div>
-        </Link>
+        </div>
 
-        {/* Banter */}
-        <Link
-          to="/banter"
-          style={{ textDecoration: "none", color: "inherit", width: "100%", maxWidth: "320px" }}
+        {/* Banter – NOT clickable */}
+        <div
+          style={{
+            width: "100%",
+            maxWidth: "320px",
+            borderRadius: "16px",
+            overflow: "hidden",
+            boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)",
+            transition: "transform 0.3s ease, box-shadow 0.3s ease",
+          }}
+          onMouseEnter={(e) => (e.currentTarget.style.transform = "translateY(-8px)")}
+          onMouseLeave={(e) => (e.currentTarget.style.transform = "translateY(0)")}
         >
-          <div
-            style={{
-              borderRadius: "16px",
-              overflow: "hidden",
-              boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)",
-              transition: "transform 0.3s ease, box-shadow 0.3s ease",
-            }}
-            onMouseEnter={(e) => (e.currentTarget.style.transform = "translateY(-8px)")}
-            onMouseLeave={(e) => (e.currentTarget.style.transform = "translateY(0)")}
-          >
-            <img src={banterImg} alt="Banter" style={{ width: "100%", height: "200px", objectFit: "cover" }} />
-            <div style={{ padding: "1rem" }}>
-              <h3>Banter Kiosk</h3>
-              <p style={{ color: "#555" }}>An interactive kiosk UI built for Banter’s smart retail experience.</p>
-            </div>
+          <img
+            src={banterImg}
+            alt="Banter"
+            style={{ width: "100%", height: "200px", objectFit: "cover" }}
+          />
+          <div style={{ padding: "1rem" }}>
+            <h3>Banter Kiosk</h3>
+            <p style={{ color: "#555" }}>
+              An interactive kiosk UI built for Banter’s smart retail experience.
+            </p>
           </div>
-        </Link>
+        </div>
 
-        {/* Inclusive Portal */}
-        <Link
-          to="/inclusiveportal"
-          style={{ textDecoration: "none", color: "inherit", width: "100%", maxWidth: "320px" }}
+        {/* Inclusive Portal – NOT clickable */}
+        <div
+          style={{
+            width: "100%",
+            maxWidth: "320px",
+            borderRadius: "16px",
+            overflow: "hidden",
+            boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)",
+            transition: "transform 0.3s ease, box-shadow 0.3s ease",
+          }}
+          onMouseEnter={(e) => (e.currentTarget.style.transform = "translateY(-8px)")}
+          onMouseLeave={(e) => (e.currentTarget.style.transform = "translateY(0)")}
         >
-          <div
-            style={{
-              borderRadius: "16px",
-              overflow: "hidden",
-              boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)",
-              transition: "transform 0.3s ease, box-shadow 0.3s ease",
-            }}
-            onMouseEnter={(e) => (e.currentTarget.style.transform = "translateY(-8px)")}
-            onMouseLeave={(e) => (e.currentTarget.style.transform = "translateY(0)")}
-          >
-            <img src={portalImg} alt="Inclusive Portal" style={{ width: "100%", height: "200px", objectFit: "cover" }} />
-            <div style={{ padding: "1rem" }}>
-              <h3>Inclusive Job Portal</h3>
-              <p style={{ color: "#555" }}>A platform designed with accessibility filters and inclusive UX principles.</p>
-            </div>
+          <img
+            src={portalImg}
+            alt="Inclusive Portal"
+            style={{ width: "100%", height: "200px", objectFit: "cover" }}
+          />
+          <div style={{ padding: "1rem" }}>
+            <h3>Inclusive Job Portal</h3>
+            <p style={{ color: "#555" }}>
+              A platform designed with accessibility filters and inclusive UX principles.
+            </p>
           </div>
-        </Link>
+        </div>
 
-        {/* ✅ CS6041 — Assignment 3 (4th card) */}
+        {/* ✅ CS6041 — Assignment 3 (4th card) – still clickable */}
         <Link
           to="/cs6041"
-          style={{ textDecoration: "none", color: "inherit", width: "100%", maxWidth: "320px" }}
+          style={{
+            textDecoration: "none",
+            color: "inherit",
+            width: "100%",
+            maxWidth: "320px",
+          }}
         >
           <div
             style={{
@@ -145,7 +158,11 @@ const Home = () => {
             onMouseEnter={(e) => (e.currentTarget.style.transform = "translateY(-8px)")}
             onMouseLeave={(e) => (e.currentTarget.style.transform = "translateY(0)")}
           >
-            <img src={cs6041Img} alt="CS6041 — Assignment 3" style={{ width: "100%", height: "200px", objectFit: "cover" }} />
+            <img
+              src={cs6041Img}
+              alt="CS6041 — Assignment 3"
+              style={{ width: "100%", height: "200px", objectFit: "cover" }}
+            />
             <div style={{ padding: "1rem" }}>
               <h3>CS6041 — Assignment 3</h3>
               <p style={{ color: "#555" }}>Approach, notes, and key design decisions.</p>

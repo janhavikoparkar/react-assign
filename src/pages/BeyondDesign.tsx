@@ -20,9 +20,8 @@ const BeyondDesign = () => {
         Beyond Design Gallery
       </h1>
 
-      <p style={{ maxWidth: "700px", color: "#555", marginBottom: "2rem" }}>
-        Explore our gallery showcasing creativity, design, and innovation. Each image represents our journey beyond conventional design.
-      </p>
+
+
 
       {/* Embedded YouTube Video */}
       <div
@@ -39,7 +38,7 @@ const BeyondDesign = () => {
         }}
       >
         <iframe
-          src="https://www.youtube.com/embed/9kzE8isXlQY?si=1-Ha62RwHW9DTdrO"
+          src="https://www.youtube.com/embed/cMqekz5MRks"
           title="Beyond Design Video"
           style={{
             position: "absolute",
