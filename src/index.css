@@ -1,14 +1,36 @@
+/* App-wide font & layout */
+:root {
+  --font-sans: 'Outfit', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue',
+    Arial, 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+    'Noto Color Emoji', sans-serif;
+}
+
+html, body, #root { height: 100%; }
+
 body {
-  font-family: Arial, sans-serif;
+  font-family: var(--font-sans);
   margin: 0;
   padding: 0;
 }
 
+/* Links (global) */
 a {
   text-decoration: none;
   color: #333;
+  transition: color .18s ease;
 }
+a:hover { color: #007bff; }
 
-a:hover {
-  color: #007bff;
+/* Navbar links — transparent hover (no color change) */
+nav a {
+  color: #3b3054;
+  transition: none;
+  -webkit-tap-highlight-color: transparent; 
+}
+nav a:hover,
+nav a:focus,
+nav a:active {
+  color: #3b3054;          
+  background: transparent; 
+  text-decoration: none;
 }
